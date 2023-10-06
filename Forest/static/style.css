@@ -1,0 +1,35 @@
+/* Reset default margin and padding for all elements */
+body, h1, h2, h3, p, ul, li {
+    margin: 0;
+    padding: 0;
+}
+
+/* Define styles for the header and nav */
+header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+}
+
+nav {
+    background-color: #444;
+    color: white;
+    padding: 10px;
+}
+
+/* Define styles for the main container */
+.container {
+    display: flex;
+}
+
+/* Define styles for the dashboard and map sections */
+.dashboard {
+    flex: 1;
+    background-color: #f1f1f1;
+    padding: 20px;
+}
+
+.map-container {
+    flex: 3; /* Adjust the ratio as needed */
+    padding: 20px;
+}

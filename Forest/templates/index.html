@@ -3,9 +3,38 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    {{header|safe}}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
     <title>Home Page</title>
 </head>
 <body>
-    <h1>Forest Home Page</h1>
+    <header>
+        <h1>Forest Home Page</h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="/">Home</a></li>
+            <li><a href="/map">Map</a></li>
+            <li><a href="/about">About</a></li>
+        </ul>
+    </nav>
+
+    <div class="container">
+        <!-- Dashboard on the left -->
+        <aside class="dashboard">
+            <!-- Your navigation and data display elements go here -->
+        </aside>
+
+        <!-- Map on the right -->
+        <main class="map-container">
+            {{body_html|safe}}
+        
+            <script>
+                {{script|safe}}
+            </script>
+        </main>
+    </div>
+
 </body>
 </html>
