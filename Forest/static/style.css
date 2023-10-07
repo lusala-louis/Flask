@@ -1,35 +1,57 @@
 /* Reset default margin and padding for all elements */
 body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 0;
+    margin: 1;
+    padding: 1;
 }
 
-/* Define styles for the header and nav */
+/* Define styles for the header and nav 
 header {
+    background-color: #333;
+    color: white;
+    padding: 10px;
+} *
+
+/* Style for the header and navigation container */
+.header-nav-container {
+    display: flex;
+    align-items: center; /* Vertically center items within the container */
+    justify-content: space-between; /* Pushes items to the far left and right */
     background-color: #333;
     color: white;
     padding: 10px;
 }
 
-nav {
-    background-color: #444;
-    color: white;
-    padding: 10px;
+/* Style for the header inside the container */
+header h1 {
+    margin: 0; /* Remove default margin */
 }
 
-/* Define styles for the main container */
-.container {
+/* Style for the horizontal menu */
+.horizontal-menu {
+    list-style: none;
+    padding: 0;
+    margin: 0;
     display: flex;
 }
 
-/* Define styles for the dashboard and map sections */
-.dashboard {
-    flex: 1;
-    background-color: #f1f1f1;
-    padding: 20px;
+/* Style for individual menu items */
+.horizontal-menu li {
+    margin-right: 10px; /* Adjust the spacing between items as needed */
 }
 
+/* Remove underlines from links */
+.horizontal-menu a {
+    text-decoration: none;
+    color: #fff; 
+}
+
+.dashboard {
+    width: 25%; /* Adjust the width as needed */
+}
+
+/* CSS for the map container */
 .map-container {
-    flex: 3; /* Adjust the ratio as needed */
-    padding: 20px;
+    /* Set the dimensions of the map container */
+    width: 75%; 
+    height: 500px; /* Adjust the height as needed */
 }

@@ -4,32 +4,62 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{header|safe}}
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='styles.css') }}">
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='style.css') }}">
     <title>Home Page</title>
 </head>
 <body>
-    <header>
-        <h1>Forest Home Page</h1>
-    </header>
-
     <nav>
-        <ul>
-            <li><a href="/">Home</a></li>
-            <li><a href="/map">Map</a></li>
-            <li><a href="/about">About</a></li>
-        </ul>
+        <div class="header-nav-container">
+            <h1>Forest Home Page</h1>
+            <ul class="horizontal-menu">
+                <li><a href="/">Home</a></li>
+                <li><a href="/map">Map</a></li>
+                <li><a href="/about">About</a></li>
+            </ul>
+        </div>
     </nav>
 
     <div class="container">
         <!-- Dashboard on the left -->
         <aside class="dashboard">
-            <!-- Your navigation and data display elements go here -->
+            <h2>Dashboard</h2>
+            <!-- Alerts -->
+            <div class="dashboard-item">
+                <h3>Alerts</h3>
+                <ul>
+                    <li>Alert 1</li>
+                    <li>Alert 2</li>
+                    <!-- Add more alerts as needed -->
+                </ul>
+            </div>
+            <!-- Statistics -->
+            <div class="dashboard-item">
+                <h3>Statistics</h3>
+                <ul>
+                    <li>Stat 1</li>
+                    <li>Stat 2</li>
+                    <!-- Add more statistics as needed -->
+                </ul>
+            </div>
+
+            <!-- Contact Information -->
+            <div class="dashboard-contact">
+                <h3>Contact Information</h3>
+                <ul class="contact-icons">
+                    <li><a href="mailto:your.email@example.com"><img src="{{ url_for('static', filename='GMail New Icon.png') }}" alt="Email"></a></li>
+                    <li><a href="https://www.instagram.com/your_instagram"><img src="{{ url_for('static', filename='Instagram.jpg') }}" alt="Instagram"></a></li>
+                    <li><a href="https://www.twitter.com/your_twitter"><img src="{{ url_for('static', filename='Twitter X Rounded Icon.png') }}" alt="Twitter"></a></li>
+                    <li><a href="https://www.linkedin.com/in/your_linkedin"><img src="{{ url_for('static', filename='Linkedin.png') }}" alt="LinkedIn"></a></li>
+                </ul>
+            </div>
         </aside>
 
         <!-- Map on the right -->
         <main class="map-container">
-            {{body_html|safe}}
-        
+            <div id="map">
+                {{body_html|safe}}
+            </div>
+            
             <script>
                 {{script|safe}}
             </script>

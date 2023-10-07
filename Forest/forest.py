@@ -25,13 +25,13 @@ def index():
 
     return render_template('index.html', header=header, body_html=body_html, script=script)
 
-@app.route('/static/styles.css')
-def serve_css():
-    return app.send_static_file('styles.css')
+@app.route('/map')
+def display_map():
+    return render_template('map.html')
 
-@app.route('/user/<name>')
+@app.route('/about')
 def user(name):
-    return render_template('user.html', name = name)
+    return render_template('about.html')
 
 if __name__ == '__main__':
     app.run(debug=True)
