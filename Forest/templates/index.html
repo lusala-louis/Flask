@@ -4,6 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
     <title>Home Page</title>
 </head>
 <body>
@@ -17,8 +19,59 @@
         </div>
     </nav>
 
-    <div class="container">
-        <!-- Your content for the index page goes here -->
+    <div class="container-fluid">
+        <div class="row">
+            <!-- Sidebar (left column) -->
+            <div class="col-md-3">
+                <div class="sidebar">
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#alerts">
+                        Alerts
+                    </button>
+                    <div class="collapse" id="alerts">
+                        <!-- Items for Alerts -->
+                        <ul>
+                            <li>Alert 1</li>
+                            <li>Alert 2</li>
+                        </ul>
+                    </div>
+    
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#statistics">
+                        Statistics
+                    </button>
+                    <div class="collapse" id="statistics">
+                        <!-- Items for Statistics -->
+                        <ul>
+                            <li>Statistic 1</li>
+                            <li>Statistic 2</li>
+                        </ul>
+                    </div>
+    
+                    <button class="btn btn-link" data-toggle="collapse" data-target="#general-info">
+                        General Information
+                    </button>
+                    <div class="collapse" id="general-info">
+                        <!-- Items for General Information -->
+                        <ul>
+                            <li>Info 1</li>
+                            <li>Info 2</li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Content (right column) -->
+            <div class="col-md-9">
+                <!-- Your main content goes here -->
+            </div>
+        </div>
     </div>
+    <script>
+        $(document).ready(function() {
+            $('.btn-link').click(function() {
+                $($(this).data('target')).collapse('toggle');
+            });
+        });
+    </script>
+    
 </body>
 </html>

@@ -2,7 +2,7 @@
 /* Reset default margin and padding for all elements */
 body, h1, h2, h3, p, ul, li {
     margin: 0;
-    padding: 0;
+    padding: 1;
 }
 
 /* Style for the header and navigation container */
@@ -38,4 +38,54 @@ header h1 {
     text-decoration: none;
     color: #fff; 
 }
-/* Add your styling for the index page here */
+
+/* Sidebar styles */
+.sidebar {
+    background-color: #333; /* Change this color to your preferred background color */
+    padding: 10px; /* Add padding to create space around the content */
+    border-right: 1px solid #555; /* Add a border to separate sidebar from content */
+    height: 100vh; /* Set the sidebar height to 100% of the viewport height */
+    width: 200px;
+    position: sticky; /* Sticky position keeps the sidebar visible while scrolling */
+    top: 0; /* Stick to the top of the viewport */
+}
+
+/* Style for the buttons in the sidebar */
+.sidebar button {
+    display: block;
+    width: 100%;
+    padding: 10px 0;
+    text-align: left;
+    color: white;
+    border: none;
+    background: none;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+/* Hover effect for sidebar buttons */
+.sidebar button:hover {
+    background-color: #555; /* Change this color for the hover effect */
+}
+
+/* Style for the collapsible content in the sidebar */
+.sidebar .collapse {
+    margin-left: 10px; /* Adjust the left margin to create space between buttons and content */
+    display: none;
+}
+
+/* Style for the lists within the collapsible content */
+.sidebar .collapse ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+/* Style for the items in the lists */
+.sidebar .collapse li {
+    padding: 5px 0;
+}
+
+/* Style for the items in the lists when hovering */
+.sidebar .collapse li:hover {
+    background-color: #555; /* Change this color for the hover effect on list items */
+}
