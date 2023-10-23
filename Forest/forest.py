@@ -5,6 +5,10 @@ app = Flask(__name__)
 
 @app.route('/')
 def index():
+    return render_template('index.html')
+
+@app.route('/map')
+def display_map():
     # Create the map object
     m = folium.Map(location=[-0.023559, 37.906193], zoom_start=7, tiles='Stamen Terrain')
 
@@ -23,11 +27,7 @@ def index():
     # Derive the script tag to be rendered in the html body
     script = m.get_root().script.render()
 
-    return render_template('index.html', header=header, body_html=body_html, script=script)
-
-@app.route('/map')
-def display_map():
-    return render_template('map.html')
+    return render_template('map.html', header=header, body_html=body_html, script=script)
 
 @app.route('/about')
 def user(name):

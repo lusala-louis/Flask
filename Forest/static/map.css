@@ -1,3 +1,4 @@
+/* CSS for the map page */
 /* Reset default margin and padding for all elements */
 body, h1, h2, h3, p, ul, li {
     margin: 1;
@@ -38,27 +39,4 @@ header h1 {
     color: #fff; 
 }
 
-/* CSS for the container and its children */
-.container {
-    display: flex;
-    align-items: flex-start; /* Align items at the top of the container */
-}
-
-.dashboard {
-    width: 25%; /* Adjust the width as needed */
-    padding: 20px; /* Add padding for spacing */
-}
-
-/* CSS for the map container */
-.map-container {
-    /* Set the dimensions of the map container */
-    width: 75%; 
-    height: 0.8; /* Adjust the height as needed */
-}
-
-#map {
-    /* Set the dimensions of the map */
-    position: relative;
-    width: 100%;
-    height: 80%;
-}
+/* Add your styling for the map page here */

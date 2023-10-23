@@ -3,8 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='index.css') }}">
-    <title>Home Page</title>
+    {{header|safe}}
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='map.css') }}">
+    <title>Map Page</title>
 </head>
 <body>
     <nav>
@@ -17,8 +18,19 @@
         </div>
     </nav>
 
+    
     <div class="container">
-        <!-- Your content for the index page goes here -->
+        <!-- Your content for the map page goes here -->
+        <main class="map-container">
+            <!-- Create a container for the map -->
+            <div id="map">
+                {{body_html|safe}}
+            </div>
+        </main>   
     </div>
+
+    <script>
+        {{script|safe}}
+    </script>
 </body>
 </html>
