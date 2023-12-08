@@ -12,7 +12,7 @@ def index():
 @app.route('/map')
 def display_map():
     # Create the map object
-    m = folium.Map(location=[-0.023559, 37.906193], zoom_start=7, tiles='Stamen Terrain')
+    m = folium.Map(location=[-0.023559, 37.906193], zoom_start=3, height = 630, tiles='Stamen Terrain')
 
     # Add marker to the map
     folium.Marker(location=[-1.292066, 36.821945], popup='Nairobi', icon=folium.Icon(icon='cloud')).add_to(m)
@@ -30,6 +30,7 @@ def display_map():
     script = m.get_root().script.render()
 
     return render_template('map.html', header=header, body_html=body_html, script=script)
+
 
 @app.route('/about')
 def user(name):

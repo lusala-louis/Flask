@@ -71,13 +71,14 @@ header h1 {
 /* Style for the collapsible content in the sidebar */
 .sidebar .collapse {
     margin-left: 10px; /* Adjust the left margin to create space between buttons and content */
-    display: none;
+
 }
 
 /* Style for the lists within the collapsible content */
 .sidebar .collapse ul {
     list-style-type: none;
     padding: 0;
+    display: none; /* Hide the lists by default */
 }
 
 /* Style for the items in the lists */
