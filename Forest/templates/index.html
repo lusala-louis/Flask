@@ -9,69 +9,51 @@
     <title>Home Page</title>
 </head>
 <body>
-    <nav>
-        <div class="header-nav-container">
-            <h1>Forest Home Page</h1>
-            <ul class="horizontal-menu">
-                <li><a href="/">Home</a></li>
-                <li><a href="/map">Map</a></li>
-            </ul>
-        </div>
-    </nav>
-
-    <div class="container-fluid">
-        <div class="row">
-            <!-- Sidebar (left column) -->
-            <div class="col-md-3">
-                <div class="sidebar">
-                    <button class="btn btn-link" data-toggle="collapse" data-target="#alerts">
-                        Alerts
-                    </button>
-                    <div class="collapse" id="alerts">
-                        <!-- Items for Alerts -->
-                        <ul>
-                            <li>Alert 1</li>
-                            <li>Alert 2</li>
-                        </ul>
-                    </div>
+    <header>
+        <h2>Save The Trees</h2>
+    </header>
     
-                    <button class="btn btn-link" data-toggle="collapse" data-target="#statistics">
-                        Statistics
-                    </button>
-                    <div class="collapse" id="statistics">
-                        <!-- Items for Statistics -->
-                        <ul>
-                            <li>Statistic 1</li>
-                            <li>Statistic 2</li>
-                        </ul>
-                    </div>
+    <section>
+        <nav>
+        <ul>
+            <li><a href="#">Alerts</a></li>
+            <li><a href="#">Map</a></li>
+            <li><a href="#">Contacts</a></li>
+        </ul>
+        </nav>
+        
+        <article>
+        <h1>The Project</h1>
+        <p>The project employs strategically placed sensors in forests, equipped with sound recognition technology
+            to detect signs of deforestation like vehicle movements, chainsaws, and tree cutting. Real-time alerts, 
+            including precise location details, are transmitted to authorities, enabling swift intervention.The 
+            technology integrates GPS for accuracy, reliable communication protocols, cloud-based storage, and analytics 
+            for historical trends. With scalability and cost-effectiveness in mind, the project aims to proactively 
+            combat deforestation, contributing to the preservation of vital ecosystems and sustainable forest management.
+        </p>
+        <ul>
+            <li>
+                <a href="#">
+                    <img src="static\images\ngong.jpg" alt="Ngong Forest" style="width:100px;height:100px;">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="static\images\karura.jpg" alt="Karura Forest" style="width:100px;height:100px;">
+                </a>
+            </li>
+            <li>
+                <a href="#">
+                    <img src="static\images\mau.jpg" alt="Mau Forest" style="width:100px;height:100px;">
+                </a>
+            </li>
+        </ul>
+        </article>
+    </section>
     
-                    <button class="btn btn-link" data-toggle="collapse" data-target="#general-info">
-                        General Information
-                    </button>
-                    <div class="collapse" id="general-info">
-                        <!-- Items for General Information -->
-                        <ul>
-                            <li>Info 1</li>
-                            <li>Info 2</li>
-                        </ul>
-                    </div>
-                </div>
-            </div>
-            
-            <!-- Content (right column) -->
-            <div class="col-md-9">
-                <!-- Your main content goes here -->
-            </div>
-        </div>
-    </div>
-    <script>
-        $(document).ready(function() {
-            $('.btn-link').click(function() {
-                $($(this).data('target')).collapse('toggle');
-            });
-        });
-    </script>
-    
+    <footer>
+        <p>By Desmond Smith</p>
+    </footer>
+  
 </body>
 </html>

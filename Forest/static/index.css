@@ -1,92 +1,88 @@
-/* CSS for the index page */
-/* Reset default margin and padding for all elements */
-body, h1, h2, h3, p, ul, li {
-    margin: 0;
-    padding: 1;
-}
-
-/* Style for the header and navigation container */
-.header-nav-container {
-    display: flex;
-    align-items: center; /* Vertically center items within the container */
-    justify-content: space-between; /* Pushes items to the far left and right */
-    background-color: #333;
+* { 
+    box-sizing: border-box;
+  } 
+  
+  body {
+    font-family: Arial, Helvetica, sans-serif;
+  }
+  
+  /* Style the header */
+  header {
+    background-color: #0a0a0a;
+    padding: 30px;
+    text-align: center;
+    font-size: 35px;
     color: white;
-    padding: 10px;
-}
-
-/* Style for the header inside the container */
-header h1 {
-    margin: 0; /* Remove default margin */
-}
-
-/* Style for the horizontal menu */
-.horizontal-menu {
-    list-style: none;
-    padding: 0;
-    margin: 0;
-    display: flex;
-}
-
-/* Style for individual menu items */
-.horizontal-menu li {
-    margin-right: 10px; /* Adjust the spacing between items as needed */
-}
-
-/* Remove underlines from links */
-.horizontal-menu a {
-    text-decoration: none;
-    color: #fff; 
-}
-
-/* Sidebar styles */
-.sidebar {
-    background-color: #333; /* Change this color to your preferred background color */
-    padding: 10px; /* Add padding to create space around the content */
-    border-right: 1px solid #555; /* Add a border to separate sidebar from content */
-    height: 100vh; /* Set the sidebar height to 100% of the viewport height */
-    width: 200px;
-    position: sticky; /* Sticky position keeps the sidebar visible while scrolling */
-    top: 0; /* Stick to the top of the viewport */
-}
-
-/* Style for the buttons in the sidebar */
-.sidebar button {
-    display: block;
-    width: 100%;
-    padding: 10px 0;
-    text-align: left;
-    color: white;
-    border: none;
-    background: none;
-    cursor: pointer;
-    transition: background-color 0.3s;
-}
-
-/* Hover effect for sidebar buttons */
-.sidebar button:hover {
-    background-color: #555; /* Change this color for the hover effect */
-}
-
-/* Style for the collapsible content in the sidebar */
-.sidebar .collapse {
-    margin-left: 10px; /* Adjust the left margin to create space between buttons and content */
-
-}
-
-/* Style for the lists within the collapsible content */
-.sidebar .collapse ul {
+  }
+  
+  /* Create two columns/boxes that floats next to each other */
+  nav {
+    float: left;
+    width: 20%;
+    height: 500px;  /* only for demonstration, should be removed  */
+    background: #ccc;
+    padding: 20px;
+  }
+  
+  /* Style the list inside the menu */
+  nav ul {
     list-style-type: none;
     padding: 0;
-    display: none; /* Hide the lists by default */
-}
+  }
+  
+  article {
+    float: left;
+    padding: 20px;
+    width: 80%;
+    background-color: #f1f1f1;
+    height: 500px ; /* only for demonstration, should be removed */
+  }
 
-/* Style for the items in the lists */
-.sidebar .collapse li {
-    padding: 5px 0;
-}
+  article ul {
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+    overflow: hidden;
+    /* background-color: #333333; */
+  }
+  
+  article li {
+    float: left;
+    margin-right: 10px; /* Adjust spacing between images */
+  }
+  
+  article li a {
+    display: block;
+    color: white; 
+    text-align: center;
+    padding: 16px;
+    text-decoration: none;
+  }
 
-/* Style for the items in the lists when hovering */
-.sidebar .collapse li:hover {
-    background-color: #555; /* Change this color for the hover effect on list items */
-}
+  article li img {
+    max-width: 100%;
+    border-radius: 5px; /* Optional: Add border-radius for rounded corners */
+  }
+  
+  /* Clear floats after the columns */
+  section::after {
+    content: "";
+    display: table;
+    clear: both;
+  }
+  
+  /* Style the footer */
+  footer {
+    background-color: #777;
+    padding: 10px;
+    text-align: center;
+    color: white;
+  }
+  
+  /* Responsive layout - makes the two columns/boxes stack on top of each other instead of next to each other, on small screens */
+  @media (max-width: 600px) {
+    nav, article {
+      width: 100%;
+      height: auto;
+    }
+  }

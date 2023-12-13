@@ -31,6 +31,14 @@ def display_map():
 
     return render_template('map.html', header=header, body_html=body_html, script=script)
 
+# Add routes for each forest page
+@app.route('/forest/aberdare')
+def aberdare_forest():
+    return render_template('aberdare.html')  # Create aberdare.html with specific content
+
+@app.route('/forest/ngong')
+def ngong_forest():
+    return render_template('ngong.html')  # Create ngong.html with specific content
 
 @app.route('/about')
 def user(name):
