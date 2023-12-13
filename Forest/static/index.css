@@ -63,6 +63,28 @@
     max-width: 100%;
     border-radius: 5px; /* Optional: Add border-radius for rounded corners */
   }
+
+  /* Styling the links */
+  a:link {
+    color: white;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:visited {
+    color: purple;
+    background-color: transparent;
+    text-decoration: none;
+  }
+  a:hover {
+    color: red;
+    background-color: transparent;
+    text-decoration: underline;
+  }
+  a:active {
+    color: blue;
+    background-color: transparent;
+    text-decoration: underline;
+  }
   
   /* Clear floats after the columns */
   section::after {
