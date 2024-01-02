@@ -1,9 +1,33 @@
+import os
 from flask import Flask, render_template, request, redirect, url_for
 import folium
 from flask_bootstrap import Bootstrap
+from flask_sqlalchemy import SQLAchemy
+
+basedir = os.path.abspath(os.path.dirname(__file__))
 
 app = Flask(__name__)
+
+app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
+app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
+
+db = SQLAchemy(app)
 Bootstrap(app)
+
+class Sensors(db.Model):
+    __tablename__ = 'sensors'
+    id = db.Column(db.Integer, primary_key = True)
+    forest = db.Column(db.String(64))
+    latitude = db.Column(db.Float(64))
+    longitude = db.Column(db.Float(64))
+
+    def __repr__(self):
+        return '<Sensor %r>' % self.forest
+
+class Tracking(db.Model):
+    __tablename__ = 'sounds'
+    sensors_id = db.Column(db.Integer, db.ForeignKey(sensors.id))
+    
 
 @app.route('/')
 def index():
@@ -15,7 +39,7 @@ def display_map():
     m = folium.Map(location=[-0.023559, 37.906193], zoom_start=3, height = 630, tiles='Stamen Terrain')
 
     # Add marker to the map
-    folium.Marker(location=[-1.292066, 36.821945], popup='Nairobi', icon=folium.Icon(icon='cloud')).add_to(m)
+    folium.Marker(location=[13.021710, 74.793490], popup='Nairobi', icon=folium.Icon(icon='cloud')).add_to(m)
 
     # Render the map
     m.get_root().render()
