@@ -1,33 +1,17 @@
-import os
 from flask import Flask, render_template, request, redirect, url_for
 import folium
 from flask_bootstrap import Bootstrap
-from flask_sqlalchemy import SQLAchemy
-
-basedir = os.path.abspath(os.path.dirname(__file__))
+import firebase_admin
+from firebase_admin import credentials, db
 
 app = Flask(__name__)
 
-app.config['SQLALCHEMY_DATABASE_URI'] = 'sqlite:///' + os.path.join(basedir, 'data.sqlite')
-app.config['SQLALCHEMY_TRACK_MODIFICATIONS'] = False
-
-db = SQLAchemy(app)
 Bootstrap(app)
 
-class Sensors(db.Model):
-    __tablename__ = 'sensors'
-    id = db.Column(db.Integer, primary_key = True)
-    forest = db.Column(db.String(64))
-    latitude = db.Column(db.Float(64))
-    longitude = db.Column(db.Float(64))
+# Fetch the service account key
+cred = credentials.Certificate('rangerAccountKey.json')
 
-    def __repr__(self):
-        return '<Sensor %r>' % self.forest
-
-class Tracking(db.Model):
-    __tablename__ = 'sounds'
-    sensors_id = db.Column(db.Integer, db.ForeignKey(sensors.id))
-    
+firebase_admin.initialize_app(cred, {'databaseURL': 'https://ranger-29fa1-default-rtdb.firebaseio.com/'})
 
 @app.route('/')
 def index():
