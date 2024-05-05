@@ -20,10 +20,10 @@ def index():
 @app.route('/map')
 def display_map():
     # Create the map object
-    m = folium.Map(location=[-0.023559, 37.906193], zoom_start=3, height = 630, tiles='Stamen Terrain')
+    m = folium.Map(location=[-0.023559, 37.906193], zoom_start=4, height = 630, tiles='Stamen Terrain')
 
     # Add marker to the map
-    folium.Marker(location=[13.021710, 74.793490], popup='Nairobi', icon=folium.Icon(icon='cloud')).add_to(m)
+    folium.Marker(location=[-0.023559, 37.906193], popup='Nairobi', icon=folium.Icon(icon='cloud')).add_to(m)  #Nairobi coordinates 13.021710, 74.793490
 
     # Render the map
     m.get_root().render()

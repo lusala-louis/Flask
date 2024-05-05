@@ -4,20 +4,19 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     {{header|safe}}
-    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='map.css') }}">
+    <!-- <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='map.css') }}"> -->
     <title>Map Page</title>
 </head>
 <body>
     <nav>
         <div class="header-nav-container">
-            <h1>Forest Home Page</h1>
+            <h1>Karura Forest</h1>
             <ul class="horizontal-menu">
                 <li><a href="/">Home</a></li>
                 <li><a href="/map">Map</a></li>
             </ul>
         </div>
     </nav>
-
     
     <div class="map-container">
         {{body_html|safe}}

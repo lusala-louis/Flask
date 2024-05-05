@@ -1,47 +1,118 @@
-body {
-    /* margin : 0; */
+* {
+    margin: 0;
+    padding: 0;
     font-family: sans-serif;
 }
 
-#navbar {
-    height: 10px;
-    flex: content;
-    text-align: end;
-    align-content: center;
-    /* background-color: mediumpurple; */
+.container {
+    width: 100%;
+    height: 100vh;
+    background-image: url('../images/boni.jpg');
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    padding-left: 8%;
+    padding-right: 8%;
+    box-sizing: border-box;
 }
 
-#navbar a {
-    text-decoration: none;
+.navbar {
+    height: 12%;
+    display: flex;
+    align-items: center;
 }
 
-#menu {
-    float: left;
+.logo {
+    width: 50px;
+    cursor: pointer;
 }
-#menu ul {
+
+.menu-icon {
+    width: 30px;
+    cursor: pointer;
+    margin-left: 40px;
+}
+
+nav {
+    flex: 1;
+    text-align: right;
+}
+
+nav ul li {
     list-style: none;
-    margin: 12px 0px 0px 0px;;
-    padding: 0px;
+    display: inline-block;
+    margin-left: 60px;
 }
 
-#menu li {
-        border-bottom: 1px solid #ffffff;
-}
-
-#menu li a:link, #menu li a:visited {
-    font-size: 10pt;
-    font-weight: bold;
-    display: block;
-    padding: 3px 0px 3px 3px;
-    background-color: #628794;
-    color: #ffffff;
-}
-
-#menu a {
+nav ul li a {
     text-decoration: none;
+    color: #4608f0;
+    font-size: 13px;
 }
 
-.main {
-    float: right;
-    /* background-color: darkviolet; */
+.row {
+    display: flex;
+    height: 88%;
+    align-items: center;
+}
+
+.col {
+    flex-basis: 50%;
+}
+
+h1 {
+    color: #0f0f0f;
+    font-size: 100px;
+}
+
+p {
+    color: #e8eeed;
+    font-size: 14px;
+    line-height: 18px;
+}
+
+button {
+    width: 180px;
+    color: #0f0f0f;
+    font-size: 12px;
+    padding: 12px 0;
+    background: #7a5ab6;
+    border: 0;
+    border-radius: 20px;
+    outline: none;
+    margin-top: 30px;
+}
+
+.card {
+    width: 200px;
+    height: 230px;
+    display: inline-block;
+    border-radius: 10px;
+    padding: 15px 25px;
+    box-sizing: border-box;
+    cursor: pointer;
+    margin: 10px 15px;
+    background-position: center;
+    background-size: cover;
+    transition: transform 0.5s;
+}
+
+.card1 {
+    background-image: url(../images/arberdare.jpg);
+}
+
+.card2 {
+    background-image: url(../images/karura.jpg);
+}
+
+.card3 {
+    background-image: url(../images/ngong.jpg);
+}
+
+.card4 {
+    background-image: url(../images/mau.jpg);
+}
+
+.card:hover {
+    transform: translateY(-10px);
 }
