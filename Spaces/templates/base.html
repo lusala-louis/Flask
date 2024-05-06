@@ -7,15 +7,15 @@
     <link rel="stylesheet" href="{{ url_for('static', filename='css/main.css') }}">
     {% block head %}{% endblock %}
 </head>
-<body background="">
+<body>
     <div class="container">
         <div class="navbar">
             <img src="static\images\Juniper Table.jpg" class="logo">
             <nav>
                 <ul>
                     <li><a href="">HOME</a></li>
-                    <li><a href="">MAP</a></li>
-                    <li><a href="">ABOUT</a></li>
+                    <li><a href="/map">MAP</a></li>
+                    <li><a href="/about">ABOUT</a></li>
                 </ul>
             </nav>
             <img src="static\images\icons8-menu-50.png" class="menu-icon">
@@ -30,24 +30,28 @@
                     technology integrates GPS for accuracy, reliable communication protocols, cloud-based storage, and analytics 
                     for historical trends. With scalability and cost-effectiveness in mind, the project aims to proactively 
                     combat deforestation, contributing to the preservation of vital ecosystems and sustainable forest management.</p>
-                <button type="button">Explore</button>
+                <button class="button">Explore</button>
             </div>
             <div class="col">
                 <div class="card card1">
-                    <h5>Ngong</h5>
+                    <h4>Ngong</h4>
                     <p>Lorem ipsum dolor eget isingur matongem shigali manyatta</p>
+                    <button class="card-button" onclick="location.href='/ngong.html'">Go to map</button>
                 </div>
                 <div class="card card2">
-                    <h5>Kakamega</h5>
+                    <h4>Kakamega</h4>
                     <p>Lorem ipsum dolor eget isingur matongem shigali manyatta</p>
+                    <button class="card-button" onclick="location.href='/kakamega.html'">Go to map</button>
                 </div>
                 <div class="card card3">
-                    <h5>Karura</h5>
+                    <h4>Karura</h4>
                     <p>Lorem ipsum dolor eget isingur matongem shigali manyatta</p>
+                    <button class="card-button" onclick="location.href='/karura.html'">Go to map</button>
                 </div>
                 <div class="card card4">
-                    <h5>Arberdare</h5>
+                    <h4>Arberdare</h4>
                     <p>Lorem ipsum dolor eget isingur matongem shigali manyatta</p>
+                    <button class="card-button" onclick="location.href='/aberdare.html'">Go to map</button>
                 </div>
             </div>
         </div>
