@@ -10,9 +10,9 @@ def index():
 def map():
     return render_template('map.html')
 
-@app.route('/ngong')
-def ngong():
-    return render_template('ngong.html')
+@app.route('/timboroa')
+def timboroa():
+    return render_template('timboroa.html')
 
 @app.route('/kakamega')
 def kakamega():
@@ -22,8 +22,8 @@ def kakamega():
 def karura():
     return render_template('karura.html')
 
-@app.route('/arberdares')
-def arberdares():
+@app.route('/aberdares')
+def aberdares():
     return render_template('aberdare.html')
 
 @app.route('/about/')

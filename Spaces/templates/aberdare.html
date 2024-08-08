@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <title>Restrict map panning to an area</title>
+    <title>Aberdare Forest</title>
     <meta property="og:description" content="Prevent a map from being panned to a different place by setting maxBounds." />
     <meta charset='utf-8'>
     <meta name="viewport" content="width=device-width, initial-scale=1">
@@ -17,15 +17,15 @@
 <script>
     // Set bounds to New York, New York
     const bounds = [
-        [36.00000, -1.00000], // Southwest coordinates
-        [38.00000, 1.00000] // Northeast coordinates
+        [36.6118, -2.3097], // Southwest coordinates
+        [36.1218, -0.1087] // Northeast coordinates
     ];
 
     const map = new maplibregl.Map({
         container: 'map',
         style:
             'https://api.maptiler.com/maps/streets/style.json?key=get_your_own_OpIi9ZULNHzrESv6T2vL',
-        center: [36.800710, -1.221180],
+        // center: [36.7388, -0.4517],
         zoom: 13,
         maxBounds: bounds // Sets bounds as max
     });
