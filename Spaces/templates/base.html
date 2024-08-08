@@ -14,8 +14,8 @@
             <nav>
                 <ul>
                     <li><a href="">HOME</a></li>
-                    <li><a href="/map">MAP</a></li>
-                    <li><a href="/about">ABOUT</a></li>
+                    <li><a href="{{ url_for('map') }}">MAP</a></li>
+                    <li><a href="{{ url_for('about') }}">ABOUT</a></li>
                 </ul>
             </nav>
             <img src="static\images\icons8-menu-50.png" class="menu-icon">
@@ -36,26 +36,34 @@
                 <div class="card card1">
                     <h4>Ngong</h4>
                     <p>Lorem ipsum dolor eget isingur matongem shigali manyatta</p>
-                    <button class="card-button" onclick="location.href='/ngong.html'">Go to map</button>
+                    <button class="card-button" onclick="redirectToNgong()">Go to map</button>
                 </div>
                 <div class="card card2">
                     <h4>Kakamega</h4>
                     <p>Lorem ipsum dolor eget isingur matongem shigali manyatta</p>
-                    <button class="card-button" onclick="location.href='/kakamega.html'">Go to map</button>
+                    <button class="card-button" onclick="redirectToKakamega()">Go to map</button>
                 </div>
                 <div class="card card3">
                     <h4>Karura</h4>
                     <p>Lorem ipsum dolor eget isingur matongem shigali manyatta</p>
-                    <button class="card-button" onclick="location.href='/karura.html'">Go to map</button>
+                    <button class="card-button" onclick="redirectToKarura()">Go to map</button>
                 </div>
                 <div class="card card4">
                     <h4>Arberdare</h4>
                     <p>Lorem ipsum dolor eget isingur matongem shigali manyatta</p>
-                    <button class="card-button" onclick="location.href='/aberdare.html'">Go to map</button>
+                    <button class="card-button" onclick="redirectToArberdare()">Go to map</button>
                 </div>
             </div>
         </div>
     </div>
-    
+    <script>
+        function redirectToMap() {
+            window.location.href = "{{ url_for('map') }}";
+        }
+        function redirectToKarura() {
+            window.location.href = "{{ url_for('karura') }}";
+        }
+        
+    </script>
 </body>
 </html>
